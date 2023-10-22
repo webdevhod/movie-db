@@ -8,6 +8,8 @@ import { FooterComponent } from './layouts/footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { MovieComponent } from './movie/movie.component';
 import { PersonComponent } from './person/person.component';
+import { TmdbService } from './services/tmdb.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,9 +22,10 @@ import { PersonComponent } from './person/person.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [TmdbService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
