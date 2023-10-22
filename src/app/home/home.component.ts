@@ -9,10 +9,15 @@ import { lastValueFrom } from 'rxjs';
 })
 export class HomeComponent {
   movieData: unknown;
+  title: string = 'Guns of the Navarone';
 
   constructor(private tmdbService: TmdbService) { }
 
   async ngOnInit() {
     this.movieData = await lastValueFrom(this.tmdbService.getMovieData());
+  }
+
+  onH1Click() {
+    alert('h1');
   }
 }
