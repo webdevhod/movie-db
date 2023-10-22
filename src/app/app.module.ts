@@ -16,7 +16,7 @@ import { PersonComponent } from './person/person.component';
     FooterComponent,
     HomeComponent,
     MovieComponent,
-    PersonComponent
+    PersonComponent,
   ],
   imports: [
     BrowserModule,
