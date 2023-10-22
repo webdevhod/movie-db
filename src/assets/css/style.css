@@ -7790,16 +7790,11 @@ header {
   position: absolute;
   z-index: 100;
   width: 100%;
-  background-color: transparent;
+  background-color: #0f2133;
   -webkit-transition: all 0.5s ease-out;
   -moz-transition: all 0.5s ease-out;
   -o-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
-}
-@media (max-width: 991px) {
-  header {
-    background-color: #0f2133;
-  }
 }
 header .navbar-default {
   margin-bottom: 0;
