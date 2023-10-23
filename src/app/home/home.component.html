@@ -1,4 +1,11 @@
-<div class="sliderv2 movie-items slider sliderv3">
+<div
+  class="sliderv2 movie-items slider sliderv3"
+  [ngStyle]="{
+    'background': url,
+    'background-position': 'center',
+    'background-size': 'cover'
+  }"
+>
   <div class="container">
     <div class="row">
       <div class="slider-single-item">
@@ -8,8 +15,11 @@
               <span class="yell"><a href="#">Action</a></span>
               <span class="orange"><a href="#">advanture</a></span>
             </div>
-            <h1 (click)="onH1Click()">
-              <a href="#">{{ title }}<span>2013</span></a>
+            <h1>
+              <a href="#"
+                >{{ movieData?.title
+                }}<span>{{ movieData?.release_date }}</span></a
+              >
             </h1>
             <div class="social-btn">
               <a href="#" class="parent-btn"
