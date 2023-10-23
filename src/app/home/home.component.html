@@ -90,8 +90,10 @@
                     <div class="movie-item">
                       <div class="mv-img">
                         <img
-                          src="assets/images/uploads/mv-item1.jpg"
-                          alt=""
+                          src="https://image.tmdb.org/t/p/w185{{
+                            movieData?.poster_path
+                          }}"
+                          alt="{{ movieData?.title }}"
                           width="185"
                           height="284"
                         />
