@@ -16,7 +16,7 @@ interface City {
 })
 export class HomeComponent {
   movieData: Movie | undefined;
-  url: string = '';
+  
   cities: City[] = [];
   selectedCity: City | undefined;
 
@@ -24,7 +24,6 @@ export class HomeComponent {
 
   async ngOnInit() {
     this.movieData = await lastValueFrom(this.tmdbService.getMovie());
-    this.url = `url('https://image.tmdb.org/t/p/w500${this.movieData.backdrop_path}')`;
 
     this.cities = [
       { name: 'New York', code: 'NY' },

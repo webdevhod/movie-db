@@ -1,7 +1,8 @@
 <div
   class="sliderv2 movie-items slider sliderv3"
   [ngStyle]="{
-    'background-image': url,
+    'background-image':
+      'url(https://image.tmdb.org/t/p/w500' + movieData?.backdrop_path + ')',
     'background-position': 'top',
     'background-repeat': 'no-repeat',
     'background-size': 'contain'
@@ -63,7 +64,7 @@
     </div>
   </div>
 </div>
-<!-- <p-dropdown [options]="cities" optionLabel="name"></p-dropdown> -->
+<p-dropdown [options]="cities" optionLabel="name"></p-dropdown>
 <div class="movie-items">
   <div class="container">
     <div class="row ipad-width">
