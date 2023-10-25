@@ -20,7 +20,7 @@ export class HomeComponent {
   cities: City[] = [];
   selectedCity: City | undefined;
 
-  constructor(private tmdbService: TmdbService) {}
+  constructor(public tmdbService: TmdbService) {}
 
   async ngOnInit() {
     this.movieData = await lastValueFrom(this.tmdbService.getMovie());

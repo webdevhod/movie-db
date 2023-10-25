@@ -18,7 +18,8 @@ export class TmdbService {
       const url = `https://api.themoviedb.org/3/movie/${movieId}?api_key=92aaa3fd6b1887e47a42036d7f615027`;
       return this.http.get(url) as Observable<Movie>;
     } else {
-      this.url = "url('https://image.tmdb.org/t/p/w500//qtafXiYDUMKxzsssU41qWey5oiT.jpg') no-repeat";
+      this.url =
+        "url('https://image.tmdb.org/t/p/w500//qtafXiYDUMKxzsssU41qWey5oiT.jpg') no-repeat";
       return of({
         adult: false,
         backdrop_path: '/ww1eIoywghjoMzRLRIcbJLuKnJH.jpg',
@@ -113,4 +114,28 @@ export class TmdbService {
   // getPerson
 
   // getSearchResults
+
+  getImage(jpgFileLink: string | undefined, sizeAsString: string = '500') {
+    // https://www.themoviedb.org/talk/5aeaaf56c3a3682ddf0010de
+    // https://image.tmdb.org/t/p/w92/bvYjhsbxOBwpm8xLE5BhdA3a8CZ.jpg
+    // https://image.tmdb.org/t/p/w154/bvYjhsbxOBwpm8xLE5BhdA3a8CZ.jpg
+    // https://image.tmdb.org/t/p/w185/bvYjhsbxOBwpm8xLE5BhdA3a8CZ.jpg
+    // https://image.tmdb.org/t/p/w342/bvYjhsbxOBwpm8xLE5BhdA3a8CZ.jpg
+    // https://image.tmdb.org/t/p/w500/bvYjhsbxOBwpm8xLE5BhdA3a8CZ.jpg
+    // https://image.tmdb.org/t/p/w780/bvYjhsbxOBwpm8xLE5BhdA3a8CZ.jpg
+    // https://image.tmdb.org/t/p/original/bvYjhsbxOBwpm8xLE5BhdA3a8CZ.jpg
+    return jpgFileLink
+      ? `https://image.tmdb.org/t/p/${
+          sizeAsString === 'original' ? '' : 'w'
+        }${sizeAsString}${jpgFileLink}`
+      : '';
+  }
+
+  getPosterImageLink(jpgFileLink: string | undefined): string {
+    return this.getImage(jpgFileLink, '300');
+  }
+
+  getThumbnailImageLink(jpgFileLink: string | undefined): string {
+    return this.getImage(jpgFileLink, '185');
+  }
 }
