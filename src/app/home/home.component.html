@@ -77,9 +77,9 @@
                 <a href="#"
                   ><img
                     src="{{
-                      tmdbService.getPosterImageLink(movieData?.poster_path)
+                      tmdbService.getPosterLink(movieData?.poster_path)
                     }}"
-                    alt=""
+                    alt="{{ movieData?.title }}"
                 /></a>
               </div>
             </div>
@@ -187,9 +187,7 @@
                       <div class="mv-img">
                         <img
                           src="{{
-                            tmdbService.getPosterImageLink(
-                              movieData?.poster_path
-                            )
+                            tmdbService.getThumbnailLink(movieData?.poster_path)
                           }}"
                           alt="{{ movieData?.title }}"
                           width="185"

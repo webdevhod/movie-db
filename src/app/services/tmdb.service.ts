@@ -131,11 +131,11 @@ export class TmdbService {
       : '';
   }
 
-  getPosterImageLink(jpgFileLink: string | undefined): string {
+  getPosterLink(jpgFileLink: string | undefined): string {
     return this.getImage(jpgFileLink, '300');
   }
 
-  getThumbnailImageLink(jpgFileLink: string | undefined): string {
+  getThumbnailLink(jpgFileLink: string | undefined): string {
     return this.getImage(jpgFileLink, '185');
   }
 }
