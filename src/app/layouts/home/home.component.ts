@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { TmdbService } from '../services/tmdb.service';
+import { TmdbService } from '../../services/tmdb.service';
 import { lastValueFrom } from 'rxjs';
-import { Movie } from '../interfaces/movie.interface';
+import { Movie } from '../../interfaces/movie.interface';
 
 import { MenuItem } from 'primeng/api';
 interface City {
