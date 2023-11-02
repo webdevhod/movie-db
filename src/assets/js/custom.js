@@ -555,5 +555,5 @@ jQuery(function () {
       });
     }
   }
-  window.setTimeout(start_slick, 100);
+  window.setTimeout(start_slick, 500);
 });
