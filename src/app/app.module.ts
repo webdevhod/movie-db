@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './layouts/header/header.component';
 import { FooterComponent } from './layouts/footer/footer.component';
-import { HomeComponent } from './layouts/home/home.component';
+import { HomeComponent } from './home/home.component';
 import { MovieComponent } from './movie/movie.component';
 import { PersonComponent } from './person/person.component';
 import { TmdbService } from './services/tmdb.service';
@@ -14,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DropdownModule } from 'primeng/dropdown';
 import { InputTextModule } from 'primeng/inputtext';
 import { FormsModule } from '@angular/forms';
+import { RuntimeConverterPipe } from './pipes/runtime-converter.pipe';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     MovieComponent,
     PersonComponent,
+    RuntimeConverterPipe,
   ],
   imports: [
     BrowserModule,
